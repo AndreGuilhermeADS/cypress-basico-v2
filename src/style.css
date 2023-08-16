@@ -27,6 +27,7 @@ body {
     justify-content: center;
     margin: auto;
     display: grid;
+    
 }
 
 input, select, textarea, button {
