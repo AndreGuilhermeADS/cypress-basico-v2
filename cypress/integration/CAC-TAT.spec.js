@@ -237,7 +237,7 @@ describe('Central de Atendimento ao Cliente TAT', function(){
     it("seleciona um arquivo utilizando uma fixture para qual foi dada um alias", function(){
 
         cy.fixture('example.json', {encoding: null}).as('exemplo')
-        cy.get("input[type='file'")
+        cy.get("input[type='file']")
         .should('not.have.value')
         .selectFile({
             contents: '@exemplo',
