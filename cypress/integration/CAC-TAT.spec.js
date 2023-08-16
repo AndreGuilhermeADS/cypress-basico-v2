@@ -236,13 +236,9 @@ describe('Central de Atendimento ao Cliente TAT', function(){
 
     it("seleciona um arquivo utilizando uma fixture para qual foi dada um alias", function(){
 
-        cy.fixture('example.json', {encoding: null}).as('exemplo')
+        cy.fixture('example.json').as('exemplo')
         cy.get("input[type='file']")
-        .should('not.have.value')
-        .selectFile({
-            contents: '@exemplo',
-            filename:'example.json'
-        })
+        .selectFile('@exemplo')
         .then(input=>{
             expect(input[0].files[0].name).to.equal("example.json")
         })
