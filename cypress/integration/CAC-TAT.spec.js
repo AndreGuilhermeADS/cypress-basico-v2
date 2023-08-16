@@ -233,17 +233,6 @@ describe('Central de Atendimento ao Cliente TAT', function(){
         })
     })
 
-
-    it("seleciona um arquivo utilizando uma fixture para qual foi dada um alias", function(){
-
-        cy.fixture('example.json').as('exemplo')
-        cy.get("input[type='file']")
-        .selectFile('@exemplo')
-        .then(input=>{
-            expect(input[0].files[0].name).to.equal("example.json")
-        })
-    })
-
     it('verifica que a politica de privacidade abre em outra aba sem a necessidade de um clique', function(){
 
         cy.get('#privacy a')
